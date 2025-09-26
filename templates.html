@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Diary</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📝 Blockchain Diary</h1>
+    <form action="/add" method="post">
+        <textarea name="entry" placeholder="Write your entry..." required></textarea>
+        <button type="submit">Add Entry</button>
+    </form>
+    <h2>📚 Diary Chain</h2>
+    <ul>
+        {% for block in chain %}
+        <li>
+            <strong>Block {{ block.index }}</strong><br>
+            <em>{{ block.timestamp }}</em><br>
+            {{ block.entry }}<br>
+            <small>Hash: {{ block.hash }}</small><br>
+            <small>Prev: {{ block.previous_hash }}</small>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
