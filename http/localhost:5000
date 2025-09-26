@@ -1,0 +1,15 @@
+
+---
+
+### ✅ Step 3: Push to GitHub
+
+1. **Create a GitHub Repo**
+   - Go to [GitHub](https://github.com) and create a new repository named `blockchain-diary`.
+
+2. **Initialize Git Locally**
+   ```bash
+   git init
+   git remote add origin https://github.com/yourusername/blockchain-diary.git
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin master
